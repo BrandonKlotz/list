@@ -2,7 +2,9 @@
   "name": "to-do",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://brandonklotz.github.io/list",
   "dependencies": {
+    "gh-pages": "^1.0.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
     "react-scripts": "1.0.17"
@@ -10,6 +12,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "deploy" : "npm run build&&gh-pages -d build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
