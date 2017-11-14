@@ -10,11 +10,14 @@ class TodoApp extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="Form">
         <h3>TODO</h3>
-        <TodoList items={this.state.items} />
+        <div className="Content">
+          <TodoList items={this.state.items} />
+        </div>
         <form onSubmit={this.handleSubmit}>
           <input
+            placeholder="Add List Item"
             onChange={this.handleChange}
             value={this.state.text}
           />
@@ -49,11 +52,11 @@ class TodoApp extends React.Component {
 class TodoList extends React.Component {
   render() {
     return (
-      <ul>
+      <div className="Items">
         {this.props.items.map(item => (
-          <li key={item.id}>{item.text}</li>
+          <li className="Item" key={item.id}>{item.text}</li>
         ))}
-      </ul>
+      </div>
     );
   }
 }
